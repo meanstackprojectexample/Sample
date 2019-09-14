@@ -1,0 +1,56 @@
+<html>
+<head>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="stylesheets/d.css">
+	</head>
+<body>
+
+<div id="wrapper">
+	<div class="card">
+		<div class="card-header">
+			<h1>Registration portal</h1>
+		</div>
+		
+		<div class="card-body">
+	<form action="/Signup" id="form" method="post">
+		<label for="name">Name<label>
+		<input id="name" class="form-control" name="name" type="text" placeholder="Your name" />
+
+		<label for="email">Email<label>
+		<input id="email" class="form-control" name="email" type="text" placeholder="your@email.com" />
+			
+		<label for="phone">Phone<label>
+		<input id="phone" class="form-control" name="phone" type="text" placeholder="1234567890" />
+				
+		<label for="password">Password<label>
+		<input id="password" class="form-control" name="password" type="password" />
+		<label for="password-conf">Confirm Password<label>
+		<input id="password-conf" class="form-control" name="passwordConf" type="password" />
+		<label>Select College</label> 
+		<select name="College">
+				<option  value="College" class="Select">College</option>
+				<option  value="Acet">Acet</option>
+				<option  value="Aec">Aec</option>
+				<option  value="Acoe">Acoe</option>
+		</select>
+		<div class="form-group">
+		<label>Gender</label>
+		<input type="radio" name="gender" value="male" > Male
+		<input type="radio" name="gender" value="female"> Female
+		<input type="radio" name="gender" value="female"> other
+		</div>
+		<label>Language</label>
+		<input type="checkbox" name="Lang" value="Telugu">Telugu
+		<input type="checkbox" name="Lang" value="English">English
+		<input type="checkbox" name="Lang" value="Hindi">Hindi
+		<!-- <input type="radio" name="gender" value="other"> Other -->  
+
+		<input id="submit" class="btn btn-primary form-control" name="Signup" type="submit" value="Sign Up" /><br>
+		<a href="/signin" class="btn btn-danger form-control">Signin</a><br>
+	</form>
+</div>
+</div>
+</div><!--wrapper-->
+</body>
+</html>

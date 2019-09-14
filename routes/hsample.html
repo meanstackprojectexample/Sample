@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  //- Bootstrap links
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  //- external links
+  <link rel="stylesheet" href="stylesheets/form.css">
+  <script src="javascripts/form.js"></script>
+  //- Data tables
+  <script src="javascripts/table.js"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  <link rel="stylesheet	" href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css">
+</head>
+<body>
+<br>
+<br>
+<div class="container">
+  <ul class="nav nav-pills">
+    <li class="active"><a data-toggle="pill" href="#form">Form</a></li>
+    <li><a data-toggle="pill" href="#list">List</a></li>
+  </ul>
+  <div class="tab-content">
+    <div id="form" class="tab-pane fade in active">
+      <div class="container">
+        <div class="push"></div>
+        <div class="row">
+        <div class="col-xs-6 col-xs-offset-3">
+        <div class="response hide">
+        <p><strong>Post Data:</strong></p>
+        <pre></pre>
+        </div>
+        <div class="alert alert-success hide" role="alert">
+        <strong>Well done!</strong> You successfully completed this form.
+        </div>
+        <div class="alert alert-danger hide" role="alert">
+        <strong>Oh snap!</strong> Change a few things up and try submitting again.
+        </div>
+          <form name="contact" action="/form" method="post">
+          <fieldset>
+          <legend>Contact Information</legend>
+          <div class="form-group">
+          <label for="firstName" class="hide"><i class="glyphicon glyphicon-user"></i> First Name * &nbsp;</label>
+          <input autofocus type="text" name="firstName" class="form-control name" id="firstName" placeholder="First Name *" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" title="Enter first name (e.g. John)" required>
+          </div>
+          <div class="form-group">
+          <label for="lastName" class="hide"><i class="glyphicon glyphicon-user"></i> Last Name * &nbsp;</label>
+          <input type="text" name="lastName" class="form-control name" id="lastName" placeholder="Last Name *" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" title="Enter last name (e.g. Smith)" required>
+          </div>
+          <div class="form-group">
+          <label for="email" class="hide"><i class="glyphicon glyphicon-envelope"></i> E-mail * &nbsp;</label>
+          <input type="email" name="email" class="form-control email" id="email" placeholder="E-mail *" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$" title="Enter e-mail address (e.g. your.email@address.com)" required>
+          </div>
+          <div class="form-group">
+          <label for="telephone" class="hide"><i class="glyphicon glyphicon-earphone"></i> Telephone * &nbsp;</label>
+          <input type="tel" name="telephone" class="form-control tel" id="telephone" placeholder="Telephone *" pattern="^\(?\d{3}\)?[- ]?\d{3}[- ]?\d{4}$" title="Enter telephone number (e.g. 555-555-5555)" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Submit</button>
+          </fieldset>
+          </form>
+        </div>
+        </div>
+        </div>
+    </div>
+    <div id="list" class="tab-pane fade">
+      <br>
+      <br>
+      <table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.flash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js"></script>
+</html>

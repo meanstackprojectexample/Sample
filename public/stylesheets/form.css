@@ -1,0 +1,93 @@
+body {
+  background: #fff;
+}
+
+.push {
+  height: 100px;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-control.valid {
+  border-color: green;
+}
+.form-control.valid:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 128, 0, 0.6);
+}
+
+.form-control.invalid {
+  border-color: red;
+}
+.form-control.invalid:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(128, 0, 0, 0.6);
+}
+
+label {
+  position: absolute;
+  left: 12px;
+  top: -7px;
+  background: linear-gradient(white, white 51%, white 52%, white 100%);
+  font-size: 1rem;
+  padding: 0 0 0 3px;
+  font-style: italic;
+  opacity: 1;
+  transition: color ease-in-out .15s;
+}
+label.active:before, label.active:after {
+  background: #fff;
+  content: '';
+  display: block;
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  top: 7px;
+}
+label.active:before {
+  box-shadow: 0 0 5px 5px #fff;
+  left: 0;
+}
+label.active:after {
+  box-shadow: 0 0 3px 3px #fff;
+  right: 0;
+}
+label.valid {
+  color: green;
+}
+label.invalid {
+  color: red;
+}
+
+::-webkit-input-placeholder {
+  font-style: italic;
+  line-height: 1.6rem;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input::-webkit-input-placeholder::before {
+  font-family: 'Glyphicons Halflings';
+  position: relative;
+  top: 1px;
+  margin-right: 8px;
+  font-style: normal;
+}
+
+input.name::-webkit-input-placeholder::before {
+  content: "\e008";
+}
+
+input.email::-webkit-input-placeholder::before {
+  content: "\2709";
+}
+
+input.tel::-webkit-input-placeholder::before {
+  content: "\e182";
+}
+.dontshow
+{
+  display: none;
+}
